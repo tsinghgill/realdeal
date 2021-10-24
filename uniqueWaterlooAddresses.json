@@ -1499,5 +1499,4 @@
     },
     geometry: { type: 'Point', coordinates: [Array] }
   },
-  ... 6512 more items
 ]
