@@ -190,7 +190,6 @@ async function parseResults(searchPage, addressArr) {
 
     try {
       await setPostalCode(searchPage, address);
-    } catch (error) {
       await searchPage.waitForSelector('#m_ucResultsPageTabs_m_pnlSearchTab');
       await searchPage.click('#m_ucResultsPageTabs_m_pnlSearchTab');
       await searchPage.waitForSelector('#Fm23_Ctrl19_TB', {
@@ -199,9 +198,11 @@ async function parseResults(searchPage, addressArr) {
       await searchPage.evaluate(
         () => (document.getElementById('Fm23_Ctrl19_TB').value = '')
       );
+    } catch (error) {
+      console.log(`❌ ${error}`);
       continue;
     }
-
+    console.log('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
     const scrappedResultsArr = await scrapeResult(searchPage, address);
     // console.log("✅ Listings have been scrapped and logged to the console");
     // console.log(scrappedResultsArr)
@@ -219,7 +220,7 @@ async function parseResults(searchPage, addressArr) {
     // console.log(discountedHomesArr)
     finalArray = [...arr, ...discountedHomesArr];
 
-    console.log(`Updated finalArray with results from ${address}`);
+    // console.log(`Updated finalArray with results from ${address}`);
     // console.log(finalArray);
 
     await searchPage.waitForSelector('#m_ucResultsPageTabs_m_pnlSearchTab');
@@ -243,7 +244,7 @@ async function main() {
   const searchPage = await connectToRealEstate();
   const resultsArr = await parseResults(
     searchPage,
-    kitchenerWaterlooV1.slice(0, 3)
+    kitchenerWaterlooV1.slice(10, 20)
   );
   const csvResult = arrayToCsv(resultsArr);
 }
