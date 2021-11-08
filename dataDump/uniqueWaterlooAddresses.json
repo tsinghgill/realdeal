@@ -1,0 +1,1502 @@
+[
+  {
+    type: 'Feature',
+    properties: {
+      hash: '943c86d9c05ed8e5',
+      number: '64',
+      street: 'Sparrow Ave',
+      unit: '',
+      city: 'Cambridge',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '88c1e14294874caf',
+      number: '118',
+      street: 'Noecker St',
+      unit: '',
+      city: 'Waterloo',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '8cb67f9f5d71bd5e',
+      number: '217',
+      street: 'Dick St',
+      unit: '',
+      city: 'Waterloo',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'fa3b7c0fcb9eab1c',
+      number: '358',
+      street: 'Lakeview Dr',
+      unit: '',
+      city: 'Waterloo',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'f626d7347fd72f6a',
+      number: '179',
+      street: 'Yellow Birch Dr',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'a19d4faf56008e62',
+      number: '22',
+      street: 'Marlis Cres',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'efa5d4a3eacbf025',
+      number: '392',
+      street: 'Southill Dr',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'f6618923048db370',
+      number: '127',
+      street: 'Weichel St',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '5e76c2e9ef43cbb4',
+      number: '210',
+      street: 'Elgin St N',
+      unit: '',
+      city: 'Cambridge',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'c878a4014eb72a0a',
+      number: '344',
+      street: 'Breezewood Cres',
+      unit: '',
+      city: 'Waterloo',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '44744d5e40dad1b1',
+      number: '508',
+      street: 'Little Dover Cres',
+      unit: '',
+      city: 'Waterloo',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'b0000d63c8d0eed6',
+      number: '48',
+      street: 'St Charles St W',
+      unit: '',
+      city: 'Woolwich',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'f9889793d62597fa',
+      number: '9',
+      street: 'Freer Dr',
+      unit: '',
+      city: 'North Dumfries',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '213c3418027759a0',
+      number: '32',
+      street: 'Haskell Rd',
+      unit: '',
+      city: 'Cambridge',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '142b25a881cddd9c',
+      number: '7',
+      street: 'Cait Ave',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '0ed9bb7779512a00',
+      number: '84',
+      street: 'Bond St',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '7b1cfee524e1eea3',
+      number: '108',
+      street: 'Greenbrier Dr',
+      unit: '',
+      city: 'Waterloo',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '76b18ba27afe2e09',
+      number: '342',
+      street: 'Church St S',
+      unit: '',
+      city: 'Cambridge',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '885f6880205ccd82',
+      number: '579',
+      street: 'Sundew Dr',
+      unit: '',
+      city: 'Waterloo',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '99e3b233e127e3ff',
+      number: '23',
+      street: 'Rothsay Ave',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '09a6d70677bfb3e9',
+      number: '630',
+      street: 'Duke St',
+      unit: '',
+      city: 'Cambridge',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '270b43c5bae4c045',
+      number: '95',
+      street: 'Wedgewood Dr',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '5d735a207e73f2cc',
+      number: '33',
+      street: 'Chapel St',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'e55071bc81ed536e',
+      number: '96',
+      street: 'Templewood Dr',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '8a64866b9df99fa9',
+      number: '122',
+      street: 'Sekura Cres',
+      unit: '',
+      city: 'Cambridge',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'acbc037672589e6b',
+      number: '90',
+      street: 'Ridgeview Cres',
+      unit: '',
+      city: 'Waterloo',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '2b83da66ce784999',
+      number: '67',
+      street: 'Catherine St',
+      unit: '',
+      city: 'Wilmot',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '92745d40df863cea',
+      number: '',
+      street: 'Erbsville Rd',
+      unit: '',
+      city: 'Waterloo',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '927938952eb05eac',
+      number: '231',
+      street: 'Birkinshaw Rd',
+      unit: '',
+      city: 'Cambridge',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '7770587378293ce7',
+      number: '519',
+      street: 'Dansbury Dr',
+      unit: '',
+      city: 'Waterloo',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'f70845088ad28aa6',
+      number: '35',
+      street: 'Hoffman St',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'c6dd363522e67c90',
+      number: '306',
+      street: 'Faraday Crt',
+      unit: '',
+      city: 'Waterloo',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '0f8cfebabd7e3042',
+      number: '2814',
+      street: 'Herrgott Rd',
+      unit: '',
+      city: 'Wellesley',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'cbdff7e20f17aeee',
+      number: '16',
+      street: 'Mill St',
+      unit: '',
+      city: 'Woolwich',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '6edef0f028fa52ad',
+      number: '31',
+      street: 'Briarfield St',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '1d3bc905eceb0ec7',
+      number: '523',
+      street: 'Fallingbrook Dr',
+      unit: '',
+      city: 'Waterloo',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'c332b3f27254182d',
+      number: '136',
+      street: 'Endeavour Dr',
+      unit: '',
+      city: 'Cambridge',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'd444e6ab1bc223ed',
+      number: '59',
+      street: 'Grenville Ave',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '18d2452436e39ef0',
+      number: '10',
+      street: 'Sheridan Crt',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'f7570eb2043e2655',
+      number: '325',
+      street: 'Conservation Dr',
+      unit: '',
+      city: 'Waterloo',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '93ebb7ee9d55f6ec',
+      number: '69',
+      street: 'Bismark Dr',
+      unit: '',
+      city: 'Cambridge',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '3ad83f7bd81f2840',
+      number: '200',
+      street: 'Glasgow St',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '2547334e4c270f4a',
+      number: '8',
+      street: 'Onward Ave',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'dee5c900a3d54650',
+      number: '223',
+      street: 'Sunset Blvd',
+      unit: '',
+      city: 'Cambridge',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'fed5d820cdbd48bc',
+      number: '42',
+      street: 'Hillcrest Dr',
+      unit: '',
+      city: 'Cambridge',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '6bcabd897f2df5a2',
+      number: '13',
+      street: 'Golf Course Rd',
+      unit: '',
+      city: 'Woolwich',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'ffacd6b027d8050a',
+      number: '95',
+      street: 'Gracefield Cres',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '7b0e6da7b1382a0b',
+      number: '67',
+      street: 'Helene Cres',
+      unit: '',
+      city: 'Waterloo',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'fcf0f4c3a383fefc',
+      number: '342',
+      street: 'Louisa St',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'c8d366138ed987ea',
+      number: '166',
+      street: 'Forestwood Dr',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'eca817786add0971',
+      number: '224',
+      street: 'Baker St',
+      unit: '',
+      city: 'Waterloo',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'a903235352350275',
+      number: '278',
+      street: 'Parkmount Dr',
+      unit: '',
+      city: 'Waterloo',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'c2307c826ed5ade2',
+      number: '75',
+      street: 'Periwinkle St',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '6de14046db0be859',
+      number: '319',
+      street: 'Duke St W',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '2af4c50843128eee',
+      number: '140',
+      street: 'Dorset Rd',
+      unit: '',
+      city: 'Cambridge',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '76cc2a65567a6f53',
+      number: '57',
+      street: 'Century Hill Dr',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'e90a9ce903cc679d',
+      number: '922',
+      street: 'Creekside Dr',
+      unit: '',
+      city: 'Waterloo',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '05f7b5319e411b8b',
+      number: '16',
+      street: 'Wellington St',
+      unit: '',
+      city: 'Cambridge',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '41d0a0b606cc53e3',
+      number: '58',
+      street: 'Chateau Cres',
+      unit: '',
+      city: 'Cambridge',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'e3a2779668c71900',
+      number: '',
+      street: 'Riverview Pl',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'a85c1f7990936560',
+      number: '134',
+      street: 'Farrier Dr',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '202e9fc9e6822a50',
+      number: '2199',
+      street: 'West River Rd',
+      unit: '',
+      city: 'North Dumfries',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '0e90a2238735a2e5',
+      number: '187',
+      street: 'Arnold St',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'cf0653da19023f15',
+      number: '584',
+      street: 'Coronation Blvd',
+      unit: '',
+      city: 'Cambridge',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'daad3a953cd8d023',
+      number: '177',
+      street: 'Cowan Blvd',
+      unit: '',
+      city: 'Cambridge',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '4ec26707251bd2a7',
+      number: '990',
+      street: 'Erb St W',
+      unit: '',
+      city: 'Waterloo',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '060131eabc83820c',
+      number: '9',
+      street: 'Cross St',
+      unit: '',
+      city: 'Woolwich',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '38355985ead2eeb2',
+      number: '26',
+      street: 'Queen St',
+      unit: '',
+      city: 'Woolwich',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'c9f2610b6d4cd433',
+      number: '7',
+      street: 'Kestrel St',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '02be299e0a98effe',
+      number: '594',
+      street: 'Canso Pl',
+      unit: '',
+      city: 'Waterloo',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '87c2a2550f0dcc62',
+      number: '2001',
+      street: 'Moser-Young Rd',
+      unit: '',
+      city: 'Wellesley',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '1aa523d4529197fa',
+      number: '253',
+      street: 'Becker St',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '83a05cb7863cbdac',
+      number: '300',
+      street: 'Dundas St N',
+      unit: '',
+      city: 'Cambridge',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '3aff8f9879b1dabf',
+      number: '100',
+      street: 'Wakefield St',
+      unit: '',
+      city: 'Woolwich',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'ebc2ec193a55f831',
+      number: '95',
+      street: 'Gouda Pl',
+      unit: '',
+      city: 'Cambridge',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'cf804d5fc107a2f2',
+      number: '221',
+      street: 'Mountain Laurel Cres',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'bec0c51b0e62939b',
+      number: '16',
+      street: 'Kenwood Dr',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '590f2872e5031980',
+      number: '82',
+      street: 'Scrimger Ave',
+      unit: '',
+      city: 'Cambridge',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '57ed4557c09dd44f',
+      number: '63',
+      street: 'Saddlewood Dr',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'b28918773eb3cb9a',
+      number: '54',
+      street: 'Deer Ridge Cres',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'ed8733159662cdf3',
+      number: '80',
+      street: 'Elkington Dr',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'c0991a87321110c7',
+      number: '32',
+      street: 'Pickett Pl',
+      unit: '',
+      city: 'Cambridge',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '48f58157e97831b6',
+      number: '122',
+      street: 'Hickory Hollow Cres',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'c072edfc633a2112',
+      number: '',
+      street: 'Line 86',
+      unit: '',
+      city: 'Woolwich',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '7bfce039aa58dd16',
+      number: '81',
+      street: 'Porchlight Dr',
+      unit: '',
+      city: 'Woolwich',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'e3cbe5f764c2017a',
+      number: '15',
+      street: 'Bishop Crt',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'd6643695296cf6ee',
+      number: '35',
+      street: 'Kingfisher Dr',
+      unit: '',
+      city: 'Woolwich',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'f91c2735ecc48c86',
+      number: '103',
+      street: 'Bartleman Cres',
+      unit: '',
+      city: 'Cambridge',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '845c2a36f6d39d18',
+      number: '',
+      street: 'Idlewood Dr',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '19354f6cfc377712',
+      number: '11',
+      street: 'Shirk Pl',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'a0a355e4c39e72ba',
+      number: '49',
+      street: 'Adelaide St',
+      unit: '',
+      city: 'Wellesley',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'c61289d2b2fdc408',
+      number: '31',
+      street: 'Woodmans Crt',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '64a2a1defda198a8',
+      number: '126',
+      street: 'Horseshoe Cres',
+      unit: '',
+      city: 'Woolwich',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'a073a8c71dbb3548',
+      number: '47',
+      street: 'Ellen St W',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '293083b35502791b',
+      number: '6',
+      street: 'Tecumseh Cres',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '8febd669e36c8752',
+      number: '14',
+      street: 'Timber Trail Rd',
+      unit: '',
+      city: 'Woolwich',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '2670190f7e897a80',
+      number: '12',
+      street: 'Oak Dr',
+      unit: '',
+      city: 'Woolwich',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'bbd0195b66649562',
+      number: '48',
+      street: 'Highland Cres',
+      unit: '',
+      city: 'Cambridge',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: 'd3dfac70148867b6',
+      number: '192',
+      street: 'Resurrection Dr',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+  {
+    type: 'Feature',
+    properties: {
+      hash: '4c0e9ab2ca0acfc1',
+      number: '32',
+      street: 'Windrush Trail',
+      unit: '',
+      city: 'Kitchener',
+      district: '',
+      region: '',
+      postcode: '',
+      id: ''
+    },
+    geometry: { type: 'Point', coordinates: [Array] }
+  },
+]
