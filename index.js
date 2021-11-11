@@ -229,7 +229,7 @@ async function parseResults(searchPage, addressArr) {
         finalArray = [...finalArray, ...discountedHomesArr];
 
         console.log('✅ Updated finalArray:');
-        console.log(finalArray);
+        console.log(JSON.stringify(finalArray, null, 1));
 
         // await searchPage.waitForSelector('#m_ucResultsPageTabs_m_pnlSearchTab');
         // await searchPage.click('#m_ucResultsPageTabs_m_pnlSearchTab');
