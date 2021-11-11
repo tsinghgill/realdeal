@@ -9,6 +9,7 @@ const _getAverageHomePrice = arrayOfObjects => {
             validHomesPricesInArr++;
             aggregatedHomePrices = aggregatedHomePrices + home.currentPrice;
         } else {
+            // The homes logged below should only be non active homes
             console.log(`Home price is either not a number or is not closed:`);
             console.log(home);
         }
@@ -20,36 +21,31 @@ const _getAverageHomePrice = arrayOfObjects => {
 const _getActiveHomesXPercentBelowAverageHomePrice = (
     discountPercentage,
     averageHomePrice,
-    arrayOfHomes,
+    scrappedResultsArr,
     finalArray
 ) => {
-    let discountedHomes = [];
+    let newHomesArr = [];
 
     const maxHomePrice = averageHomePrice * (1 - discountPercentage);
 
-    arrayOfHomes.forEach(home => {
-        // console.log('✅ ✅ ✅ ✅ ✅ home ✅ ✅ ✅ ✅ ✅')
-        // console.log(home)
+    scrappedResultsArr.forEach(home => {
         if (finalArray.some(finalHome => finalHome.mls === home.mls)) {
-            console.log('✅ ✅ ✅ ✅ ✅ duplicate home ✅ ✅ ✅ ✅ ✅');
-            // console.log(finalHome)
+            console.log('[DEBUG] Duplicate Home');
         } else if (home.status === 'A' && home.currentPrice < maxHomePrice) {
             home.dataType = "Deal" // We categorize this as a deal, comparables will have a dataType of "Comparable"
             home.averageHomePriceInTheArea = averageHomePrice; // Add a value to the home with average home price in the area
             home.discountFromAverageHomePrice = Math.round((1 - home.currentPrice / averageHomePrice) * 100) + '%'; // Add percentage discount
-            home.comparables = arrayOfHomes.filter(otherHome => otherHome.mls != home.mls) // Generates array of comparables excluding the home in question itself
+            home.comparables = scrappedResultsArr.filter(otherHome => otherHome.mls != home.mls) // Generates array of comparables excluding the home in question itself
 
             home.comparables.forEach(home => home.dataType = "Comparable") // Here we add dataType of comparable, to comparable homes, this is needed for csv and google spreadsheet displays
-                // console.log('✅ Found discounted home ✅')
-                // console.log(home)
-            discountedHomes.push(home);
+            newHomesArr.push(home);
         }
     });
 
-    console.log('✅ FINAL discountedHomes ✅');
-    console.log(JSON.stringify(discountedHomes, null, 1));
+    console.log('✅ New deals we found - newHomesArr:');
+    console.log(JSON.stringify(newHomesArr, null, 1));
 
-    return discountedHomes;
+    return newHomesArr;
 };
 
 module.exports = {

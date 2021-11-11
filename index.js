@@ -59,7 +59,7 @@ async function openIsoMatrix(page) {
 async function openSearchResidental(browser) {
     const page = await browser.newPage();
 
-    await page.setViewport({ width: 1280, height: 800 });
+    await page.setViewport({ width: 1400, height: 800 });
     await page.goto('https://matrix.itsorealestate.ca/Matrix/Search/Residential');
 
     return page;
@@ -68,69 +68,75 @@ async function openSearchResidental(browser) {
 /* Choose the "options" on the Search page */
 async function setSearchSettings(page) {
     await page.waitForSelector(`[data-mtx-track="Status - Active"]`);
-    await page.type('#FmFm23_Ctrl18_119_Ctrl18_TB', '0-5');
+    await page.type('#FmFm23_Ctrl18_119_Ctrl18_TB', '0-25');
     // await page.click(`[data-mtx-track="Status - Suspended"]`);
     await page.click(`[data-mtx-track="Status - Closed"]`);
     await page.click(`[data-mtx-track="Property Sub Type - House"]`);
     await page.click(`[data-mtx-track="Property Attached - Detached"]`);
 
     await page.waitForTimeout(500);
-    await page.type('.mapSearchDistance', '0.3');
+    await page.type('.mapSearchDistance', '0.5');
     // console.log("✅ Done setting search settings.");
 }
 
-async function setPostalCode(page, postalCodeQuery) {
-    // await page.waitForSelector(`[data-mtx-track="Status - Active"]`);
-    // await page.click(`[data-mtx-track="Status - Suspended"]`);
-    // await page.click(`[data-mtx-track="Status - Closed"]`);
+async function setAddress(page, addressQuery) {
+    // Make sure we are on "Criteria" tab aka "m_ucResultsPageTabs_m_pnlSearchTab"
+    await page.waitForSelector('#m_ucResultsPageTabs_m_pnlSearchTab');
+    await page.click('#m_ucResultsPageTabs_m_pnlSearchTab');
 
-    // await page.waitForTimeout(1000);
-    // await page.type(".mapSearchDistance", "0.5");
-    // console.log("Setting postal code ...")
+    // Make sure the address search input is cleared aka "Fm23_Ctrl19_TB"
+    await page.waitForSelector('#Fm23_Ctrl19_TB', {
+        visible: true,
+    });
+    await page.evaluate(
+        () => (document.getElementById('Fm23_Ctrl19_TB').value = '')
+    );
+
+    // Type address query in address search input
     await page.waitForSelector('#Fm23_Ctrl19_TB', { visible: true });
-    await page.type('#Fm23_Ctrl19_TB', postalCodeQuery);
+    await page.type('#Fm23_Ctrl19_TB', addressQuery);
 
+    // Wait for the address search suggesstion results to show up
     // await page.waitForTimeout(1000);
-    // Wait for the location results to show up
     await page.waitForSelector('.disambiguation', { visible: true });
 
+    // Select the first address search suggestion
     // await page.waitForTimeout(1000);
     await page.evaluate(() => {
         document.querySelector('.disambiguation').children[1].click();
     });
 }
 
-async function scrapeResult(page, postalCode) {
+async function gotoResultsThenScrapeThenReturnArray(page, addressQuery) {
+    // This selects the "Results" tab aka "m_ucResultsPageTabs_m_pnlResultsTab"
     // await page.waitForTimeout(1000);
     await page.waitForSelector('#m_ucResultsPageTabs_m_pnlResultsTab');
     await page.click('#m_ucResultsPageTabs_m_pnlResultsTab');
 
     await page.waitForTimeout(1000);
 
-    const failed = await page.evaluate(() => {
+    // If noListingsFound gives us a value, that means no listings were found
+    const noListingsFound = await page.evaluate(() => {
         return document.querySelector('#m_pnlNoResults');
     });
 
-    let scrappedResultsArr = [];
-    if (failed == null) {
+    if (!noListingsFound) {
         try {
             await page.waitForSelector('.j-DisplayCore-item');
         } catch {
-            console.log(
-                `❌ WARNING possibly no results for postal code: ${postalCode}. Returning empty array for now.`
-            );
+            console.log(`❌ ❌ ❌ [BUG] Possible bug here for address: ${addressQuery}. Should have loaded listings. Returning empty array for now.`);
             return [];
         }
 
-        scrappedResultsArr = await page.evaluate(() => {
+        // Here we grab the raw HTML then generate an object which is stored in scrappedResultsArr
+        const scrappedResultsArr = await page.evaluate(() => {
             const results = Array.from(
                 document.querySelectorAll('.j-DisplayCore-item')
             );
             // console.log("Raw HTML Results:");
             // console.log(results);
 
-            let scrappedResultsArr = [];
-            // mls number will be the unique identifier for each property
+            let formattedResultsArr = [];
             results.forEach(row => {
                 let homeObj = {
                     distanceFromSearch: row.children[1].innerText,
@@ -152,12 +158,18 @@ async function scrapeResult(page, postalCode) {
                     baths: row.children[23].innerText,
                     lotSqft: Math.round(row.children[20].innerText) * Math.round(row.children[21].innerText)
                 };
-                scrappedResultsArr.push(homeObj);
+                formattedResultsArr.push(homeObj);
             });
-            return scrappedResultsArr;
+
+            // Here we return scrappedResultsArr which has the formatted HTML data
+            return formattedResultsArr;
         });
+
+        return scrappedResultsArr
+    } else {
+        console.log(`❌ [WARN] no listings found for addressQuery: ${addressQuery}. Returning empty array.`);
+        return [];
     }
-    return scrappedResultsArr;
 }
 
 /**
@@ -185,30 +197,24 @@ async function connectToRealEstate() {
  * @returns Array of results
  */
 async function parseResults(searchPage, addressArr) {
-    const arr = [];
     let finalArray = [];
 
     for (const address of addressArr) {
         console.log(`In for of loop, trying address: ${address}`);
 
         try {
-            await setPostalCode(searchPage, address);
-            await searchPage.waitForSelector('#m_ucResultsPageTabs_m_pnlSearchTab');
-            await searchPage.click('#m_ucResultsPageTabs_m_pnlSearchTab');
-            await searchPage.waitForSelector('#Fm23_Ctrl19_TB', {
-                visible: true,
-            });
-            await searchPage.evaluate(
-                () => (document.getElementById('Fm23_Ctrl19_TB').value = '')
-            );
+            await setAddress(searchPage, address);
         } catch (error) {
             console.log(`❌ ${error}`);
             continue;
         }
-        console.log('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
-        const scrappedResultsArr = await scrapeResult(searchPage, address);
-        // console.log("✅ Listings have been scrapped and logged to the console");
-        // console.log(scrappedResultsArr)
+
+        const scrappedResultsArr = await gotoResultsThenScrapeThenReturnArray(searchPage, address);
+
+        if (scrappedResultsArr.length === 0) {
+            console.log(`❌ [WARN] No results found for ${address}`);
+            continue;
+        }
 
         const averageHomePrice = _getAverageHomePrice(scrappedResultsArr);
         console.log(`averageHomePrice: ${averageHomePrice}`);
@@ -217,22 +223,21 @@ async function parseResults(searchPage, addressArr) {
             0.2,
             averageHomePrice,
             scrappedResultsArr,
-            arr
+            finalArray
         );
-        // console.log("✅ discountedHomesArr");
-        // console.log(discountedHomesArr)
+
         finalArray = [...finalArray, ...discountedHomesArr];
 
-        // console.log(`Updated finalArray with results from ${address}`);
-        // console.log(finalArray);
+        console.log('✅ Updated finalArray:');
+        console.log(finalArray);
 
-        await searchPage.waitForSelector('#m_ucResultsPageTabs_m_pnlSearchTab');
-        await searchPage.click('#m_ucResultsPageTabs_m_pnlSearchTab');
+        // await searchPage.waitForSelector('#m_ucResultsPageTabs_m_pnlSearchTab');
+        // await searchPage.click('#m_ucResultsPageTabs_m_pnlSearchTab');
 
-        await searchPage.waitForSelector('#Fm23_Ctrl19_TB', { visible: true });
-        await searchPage.evaluate(
-            () => (document.getElementById('Fm23_Ctrl19_TB').value = '')
-        );
+        // await searchPage.waitForSelector('#Fm23_Ctrl19_TB', { visible: true });
+        // await searchPage.evaluate(
+        //     () => (document.getElementById('Fm23_Ctrl19_TB').value = '')
+        // );
     }
     console.log('✅ ✅ ✅ ✅ ✅ ✅ ✅ DONE ✅ ✅ ✅ ✅ ✅ ✅ ✅');
     console.log('finalArray');
@@ -241,7 +246,7 @@ async function parseResults(searchPage, addressArr) {
 }
 
 // We want to build query to only have location address
-// We can have postalCodeQuery & withinKMQuery
+// We can have addressQuery & withinKMQuery
 // Then we want to loop through the query and export all the data
 async function main() {
     const searchPage = await connectToRealEstate();
