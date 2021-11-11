@@ -3,7 +3,7 @@ const arrayToCsv = arr => {
             [
                 'Data Type',
                 'Days On Market',
-                'MlS Number',
+                'MLS Number',
                 'Listed Price',
                 'Average Price Nearby',
                 'Discount',
@@ -47,11 +47,11 @@ const arrayToCsv = arr => {
 
 const arrayToCsvForComps = arr => {
     let csvArr = [
-        'Data Type, MlS Number, Days On Market, Listed Price, Average Price Nearby, Discount, Address, City, Beds, Baths, Sqft Above Ground, Sqft Below Ground, Sqft Total, Sqft Diff, Lot Depth, Lot Front, Lot Sqft, Lot Sqft Diff'
+        'Data Type, MLS Number, Days On Market, Listed Price, Average Price Nearby, Address, City, Beds, Baths, Sqft Above Ground, Sqft Below Ground, Sqft Total, Lot Depth, Lot Front, Lot Sqft, Discount, Sqft Diff, Lot Sqft Diff'
     ]
 
     arr.forEach(home => {
-        let csvDeal = home.dataType + ',' + home.mls + ',' + home.daysOnMarket + ',' + home.currentPrice + ',' + home.averageHomePriceInTheArea + ',' + home.discountFromAverageHomePrice + ',' + home.address + ',' + home.city + ',' + home.beds + ',' + home.baths + ',' + home.sqftAboveGround + ',' + home.sqftBelowGround + ',' + home.sqftTotal + ',' + 'NA' + ',' + home.lotDepth + ',' + home.lotFront + ',' + home.lotSqft
+        let csvDeal = home.dataType + ',' + home.mls + ',' + home.daysOnMarket + ',' + home.currentPrice + ',' + home.averageHomePriceInTheArea + ',' + home.address + ',' + home.city + ',' + home.beds + ',' + home.baths + ',' + home.sqftAboveGround + ',' + home.sqftBelowGround + ',' + home.sqftTotal + ',' + home.lotDepth + ',' + home.lotFront + ',' + home.lotSqft + ',' + home.discountFromAverageHomePrice + ',' + 'NA' + ',' + 'NA'
         csvArr.push(csvDeal)
 
         if (home.comparables && home.comparables.length > 0) {
@@ -62,10 +62,10 @@ const arrayToCsvForComps = arr => {
                 let formattedLotSqftDiff = 'NA'
                 if (home.lotSqft > 0) {
                     const lotSqftDiff = Math.round((comp.lotSqft / home.lotSqft - 1) * 100) || undefined
-                    let formattedLotSqftDiff = lotSqftDiff + '%'
+                    formattedLotSqftDiff = lotSqftDiff + '%'
                 }
 
-                let csvComp = comp.dataType + ',' + comp.mls + ',' + comp.daysOnMarket + ',' + comp.currentPrice + ',' + "NA" + ',' + "NA" + ',' + comp.address + ',' + comp.city + ',' + comp.beds + ',' + comp.baths + ',' + comp.sqftAboveGround + ',' + comp.sqftBelowGround + ',' + comp.sqftTotal + ',' + formattedSqftDiff + ',' + comp.lotDepth + ',' + comp.lotFront + ',' + comp.lotSqft + ',' + formattedLotSqftDiff
+                let csvComp = comp.dataType + ',' + comp.mls + ',' + comp.daysOnMarket + ',' + comp.currentPrice + ',' + "NA" + ',' + comp.address + ',' + comp.city + ',' + comp.beds + ',' + comp.baths + ',' + comp.sqftAboveGround + ',' + comp.sqftBelowGround + ',' + comp.sqftTotal + ',' + comp.lotDepth + ',' + comp.lotFront + ',' + comp.lotSqft + ',' + "NA" + ',' + formattedSqftDiff + ',' + formattedLotSqftDiff
                 csvArr.push(csvComp)
             })
         }

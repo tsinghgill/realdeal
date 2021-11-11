@@ -150,7 +150,7 @@ async function gotoResultsThenScrapeThenReturnArray(page, addressQuery) {
                     city: row.children[14].innerText,
                     sqftAboveGround: parseInt(row.children[17].innerText.replace(/\D/g, '')) || 0,
                     sqftBelowGround: parseInt(row.children[18].innerText.replace(/\D/g, '')) || 0,
-                    sqftTotal: parseInt(row.children[17].innerText.replace(/\D/g, '')) || 0 + parseInt(row.children[18].innerText.replace(/\D/g, '')) || 0,
+                    sqftTotal: (parseInt(row.children[17].innerText.replace(/\D/g, '')) || 0) + (parseInt(row.children[18].innerText.replace(/\D/g, '')) || 0), // TODO: This might not be calculating correctly
                     daysOnMarket: parseInt(row.children[19].innerText.replace(/\D/g, '')),
                     lotDepth: Math.round(row.children[20].innerText),
                     lotFront: Math.round(row.children[21].innerText),
