@@ -1,9 +1,12 @@
 require('dotenv').config();
+const stringify = require('json-stringify-safe'); // Required to stringify cicular objects, crashed out script using regular JSON.stringify (TypeError: Converting circular structure to JSON --> starting at object with constructor 'Object')
+
 
 const kitchenerWaterlooV1 = require('./data/kitchenerWaterloo_v1');
 const allDataV1 = require('./data/allData_v1');
+const KitchenerWaterloo_OSM_Parsed = require('./data/KitchenerWaterloo_OSM_Parsed');
 
-const { arrayToCsv, arrayToCsvForComps } = require('./helpers/arrayToCsv');
+const { arrayToCsv, arrayToCsvForComps, arrayToCsvForCompsSimple } = require('./helpers/arrayToCsv');
 const {
     _getActiveHomesXPercentBelowAverageHomePrice,
     _getAverageHomePrice,
@@ -68,14 +71,14 @@ async function openSearchResidental(browser) {
 /* Choose the "options" on the Search page */
 async function setSearchSettings(page) {
     await page.waitForSelector(`[data-mtx-track="Status - Active"]`);
-    await page.type('#FmFm23_Ctrl18_119_Ctrl18_TB', '0-25');
+    await page.type('#FmFm23_Ctrl18_119_Ctrl18_TB', '0-3');
     // await page.click(`[data-mtx-track="Status - Suspended"]`);
     await page.click(`[data-mtx-track="Status - Closed"]`);
     await page.click(`[data-mtx-track="Property Sub Type - House"]`);
     await page.click(`[data-mtx-track="Property Attached - Detached"]`);
 
     await page.waitForTimeout(500);
-    await page.type('.mapSearchDistance', '0.5');
+    await page.type('.mapSearchDistance', '0.33');
     // console.log("✅ Done setting search settings.");
 }
 
@@ -219,6 +222,13 @@ async function parseResults(searchPage, addressArr) {
         const averageHomePrice = _getAverageHomePrice(scrappedResultsArr);
         console.log(`averageHomePrice: ${averageHomePrice}`);
 
+        // averageHomePrice is our main compare value. We should add all metrics before we extract deals, since we are using the metrics to determine the deals!
+        // Add averageHomePriceInTheArea & discountFromAverageHomePrice to each house
+        scrappedResultsArr.forEach(home => {
+            home.averageHomePriceInTheArea = averageHomePrice;
+            home.discountFromAverageHomePrice = Math.round((1 - home.currentPrice / averageHomePrice) * 100) + '%';
+        })
+
         const discountedHomesArr = _getActiveHomesXPercentBelowAverageHomePrice(
             0.2,
             averageHomePrice,
@@ -229,7 +239,7 @@ async function parseResults(searchPage, addressArr) {
         finalArray = [...finalArray, ...discountedHomesArr];
 
         console.log('✅ Updated finalArray:');
-        console.log(JSON.stringify(finalArray, null, 1));
+        console.log(stringify(finalArray, null, 1));
 
         // await searchPage.waitForSelector('#m_ucResultsPageTabs_m_pnlSearchTab');
         // await searchPage.click('#m_ucResultsPageTabs_m_pnlSearchTab');
@@ -255,7 +265,7 @@ async function main() {
         // kitchenerWaterlooV1.slice(10, 11)
         allDataV1
     );
-    const csvResult = arrayToCsvForComps(resultsArr);
+    const csvResult = arrayToCsvForCompsSimple(resultsArr);
 }
 
 main();

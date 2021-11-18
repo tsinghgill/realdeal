@@ -1,3 +1,5 @@
+const stringify = require('json-stringify-safe'); // Required to stringify cicular objects, crashed out script using regular JSON.stringify (TypeError: Converting circular structure to JSON --> starting at object with constructor 'Object')
+
 const _getAverageHomePrice = arrayOfObjects => {
     let validHomesPricesInArr = 0;
     let aggregatedHomePrices = 0;
@@ -33,8 +35,8 @@ const _getActiveHomesXPercentBelowAverageHomePrice = (
             console.log('[DEBUG] Duplicate Home');
         } else if (home.status === 'A' && home.currentPrice < maxHomePrice) {
             home.dataType = "Deal" // We categorize this as a deal, comparables will have a dataType of "Comparable"
-            home.averageHomePriceInTheArea = averageHomePrice; // Add a value to the home with average home price in the area
-            home.discountFromAverageHomePrice = Math.round((1 - home.currentPrice / averageHomePrice) * 100) + '%'; // Add percentage discount
+                // home.averageHomePriceInTheArea = averageHomePrice; // Add a value to the home with average home price in the area // WE DONT NEED THIS IF WE ADD IT BEFORE
+                // home.discountFromAverageHomePrice = Math.round((1 - home.currentPrice / averageHomePrice) * 100) + '%'; // Add percentage discount // WE DONT NEED THIS IF WE ADD IT BEFORE
             home.comparables = scrappedResultsArr.filter(otherHome => otherHome.mls != home.mls) // Generates array of comparables excluding the home in question itself
 
             home.comparables.forEach(home => home.dataType = "Comparable") // Here we add dataType of comparable, to comparable homes, this is needed for csv and google spreadsheet displays
@@ -43,7 +45,7 @@ const _getActiveHomesXPercentBelowAverageHomePrice = (
     });
 
     console.log('✅ New deals we found - newHomesArr:');
-    console.log(JSON.stringify(newHomesArr, null, 1));
+    console.log(stringify(newHomesArr, null, 1)); // Crashed the algo with this error: TypeError: Converting circular structure to JSON --> starting at object with constructor 'Object'
 
     return newHomesArr;
 };
