@@ -36,9 +36,9 @@ async function signIntoPortal(page) {
     // Some bug with inputing password so we have to do it twice
     /* Input Password */
     await page.waitForTimeout(1000);
-    await page.type('#security', 'SOLDEASY99');
+    await page.type('#security', 'SOLDEASY');
     await page.waitForTimeout(2000);
-    await page.type('#security', 'SOLDEASY99');
+    await page.type('#security', 'SOLDEASY');
 
     /* Click "Sign In" */
     await page.waitForSelector('#loginbtn', { visible: true });
@@ -71,7 +71,7 @@ async function openSearchResidental(browser) {
 /* Choose the "options" on the Search page */
 async function setSearchSettings(page) {
     await page.waitForSelector(`[data-mtx-track="Status - Active"]`);
-    await page.type('#FmFm23_Ctrl18_119_Ctrl18_TB', '0-3');
+    await page.type('#FmFm23_Ctrl18_119_Ctrl18_TB', '0-25');
     // await page.click(`[data-mtx-track="Status - Suspended"]`);
     await page.click(`[data-mtx-track="Status - Closed"]`);
     await page.click(`[data-mtx-track="Property Sub Type - House"]`);
