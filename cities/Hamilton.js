@@ -2,15 +2,15 @@ require('dotenv').config();
 const stringify = require('json-stringify-safe'); // Required to stringify cicular objects, crashed out script using regular JSON.stringify (TypeError: Converting circular structure to JSON --> starting at object with constructor 'Object')
 
 
-const kitchenerWaterlooV1 = require('./data/kitchenerWaterloo_v1');
-const allDataV1 = require('./data/allData_v1');
-const searchData = require('./data/NiagaraFalls_OSM_Parsed');
+const kitchenerWaterlooV1 = require('../data/kitchenerWaterloo_v1');
+const allDataV1 = require('../data/allData_v1');
+const searchData = require('../data/Hamilton_OSM_Parsed');
 
-const { arrayToCsv, arrayToCsvForComps, arrayToCsvForCompsSimple } = require('./helpers/arrayToCsv');
+const { arrayToCsv, arrayToCsvForComps, arrayToCsvForCompsSimple } = require('../helpers/arrayToCsv');
 const {
     _getActiveHomesXPercentBelowAverageHomePrice,
     _getAverageHomePrice,
-} = require('./helpers/formula');
+} = require('../helpers/formula');
 const puppeteer = require('puppeteer');
 const path = require('path');
 
