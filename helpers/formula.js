@@ -1,25 +1,39 @@
-const stringify = require('json-stringify-safe'); // Required to stringify cicular objects, crashed out script using regular JSON.stringify (TypeError: Converting circular structure to JSON --> starting at object with constructor 'Object')
+const stringify = require('json-stringify-safe'); // Handles circular references in JSON.stringify
 
+/**
+ * Calculate the average home price from an array of home objects.
+ * Only considers homes that are closed (status 'CL').
+ *
+ * @param {Array} arrayOfObjects - Array of home objects
+ * @returns {number} - The average home price
+ */
 const _getAverageHomePrice = arrayOfObjects => {
     let validHomesPricesInArr = 0;
     let aggregatedHomePrices = 0;
 
     arrayOfObjects.forEach(home => {
-        // Make sure the value is a number
-        // We increment validHomesPricesInArr so we divide and get the correct average home price in the area
+        // Check if the current price is a number and the home is closed
         if (typeof home.currentPrice === 'number' && home.status === 'CL') {
             validHomesPricesInArr++;
-            aggregatedHomePrices = aggregatedHomePrices + home.currentPrice;
+            aggregatedHomePrices += home.currentPrice;
         } else {
-            // The homes logged below should only be non active homes
-            console.log(`Home price is either not a number or is not closed:`);
-            console.log(home);
+            // Log homes that do not meet the criteria
+            console.log('Home price is either not a number or is not closed:', home);
         }
     });
 
-    return aggregatedHomePrices / validHomesPricesInArr;
+    return aggregatedHomePrices / validHomesPricesInArr || 0;
 };
 
+/**
+ * Get homes that are listed below a certain percentage of the average home price.
+ *
+ * @param {number} discountPercentage - The discount percentage below the average home price
+ * @param {number} averageHomePrice - The average home price
+ * @param {Array} scrappedResultsArr - Array of scrapped home objects
+ * @param {Array} finalArray - Array to store final results
+ * @returns {Array} - Array of homes that meet the discount criteria
+ */
 const _getActiveHomesXPercentBelowAverageHomePrice = (
     discountPercentage,
     averageHomePrice,
@@ -27,26 +41,25 @@ const _getActiveHomesXPercentBelowAverageHomePrice = (
     finalArray
 ) => {
     let newHomesArr = [];
-
     const maxHomePrice = averageHomePrice * (1 - discountPercentage);
 
     scrappedResultsArr.forEach(home => {
-        if (finalArray.some(finalHome => finalHome.mls === home.mls)) {
-            console.log('[DEBUG] Duplicate Home');
-        } else if (home.status === 'A' && home.currentPrice < maxHomePrice) {
-            home.dataType = "Deal" // We categorize this as a deal, comparables will have a dataType of "Comparable"
-                // home.averageHomePriceInTheArea = averageHomePrice; // Add a value to the home with average home price in the area // WE DONT NEED THIS IF WE ADD IT BEFORE
-                // home.discountFromAverageHomePrice = Math.round((1 - home.currentPrice / averageHomePrice) * 100) + '%'; // Add percentage discount // WE DONT NEED THIS IF WE ADD IT BEFORE
-            home.comparables = scrappedResultsArr.filter(otherHome => otherHome.mls != home.mls) // Generates array of comparables excluding the home in question itself
+        const isDuplicate = finalArray.some(finalHome => finalHome.mls === home.mls);
+        const isEligibleForDeal = home.status === 'A' && home.currentPrice < maxHomePrice;
 
-            home.comparables.forEach(home => home.dataType = "Comparable") // Here we add dataType of comparable, to comparable homes, this is needed for csv and google spreadsheet displays
+        if (isDuplicate) {
+            console.log('[DEBUG] Duplicate Home:', home.mls);
+        } else if (isEligibleForDeal) {
+            home.dataType = 'Deal'; // Categorize this as a deal
+            home.comparables = scrappedResultsArr.filter(otherHome => otherHome.mls !== home.mls); // Generate array of comparables
+
+            home.comparables.forEach(comp => (comp.dataType = 'Comparable')); // Mark comparables
+
             newHomesArr.push(home);
         }
     });
 
-    console.log('✅ New deals we found - newHomesArr:');
-    console.log(stringify(newHomesArr, null, 1)); // Crashed the algo with this error: TypeError: Converting circular structure to JSON --> starting at object with constructor 'Object'
-
+    console.log('✅ New deals found:', stringify(newHomesArr, null, 2));
     return newHomesArr;
 };
 
